@@ -1,0 +1,165 @@
+.p1 {
+    color: black;
+    text-shadow: 5px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.bar {
+    background-color: rgb(65, 55, 59);
+}
+
+html {
+    height: 100%;
+
+}
+
+body {
+    margin: 0;
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #808080 50%, rgb(192, 192, 192) 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: .25em;
+    box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    left: 50%;
+    padding: 10vmin;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-family: monospace;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+.btnnn1 {
+    text-decoration: none;
+    border: 3px solid yellow;
+    color: transparent;
+    padding: 40px 80px;
+    font-size: 28px;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.btnnn1:before {
+    content: "You make me Happy";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: yellow;
+    background: rgb(255, 0, 127);
+    font-size: 28px;
+    top: 0;
+    left: 100%;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: scale(0) rotatey(0);
+    opacity: 0;
+}
+
+.btnnn1:hover:before {
+    transform: scale(1) rotatey(360deg);
+    left: 0;
+    opacity: 1;
+}
+
+.btnnn1:after {
+    content: "Your Smile";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: yellow;
+    background: rgb(102, 0, 204);
+    font-size: 28px;
+    top: 0;
+    left: 0;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: scale(1) rotatey(0);
+    opacity: 1;
+}
+
+.btnnn1:hover:after {
+    transform: scale(0) rotatey(360deg);
+    left: -100%;
+    opacity: 0;
+}
+
+.patterns {
+    height: 100vh;
+}
+
+
+
+svg text {
+    font-family: Lora;
+    letter-spacing: 10px;
+    stroke: #8F00FF;
+    font-size: 150px;
+    font-weight: 700;
+    stroke-width: 3;
+
+    animation: textAnimate 5s infinite alternate;
+
+}
+
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        fill: hsl(189, 68%, 75%)
+    }
+
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffstet: -20%;
+        fill: hsla(189, 68%, 75%, 0%)
+    }
+
+}

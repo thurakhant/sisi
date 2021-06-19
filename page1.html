@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Si Si & Ko Thura</title>
+    <link rel="stylesheet" href="css/page1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    <div class="content" style="font-size: 30px;">
+        <i class="fa fa-heart">Si Si & Co Thura</i>
+        <i class="fa fa-heart"></i>
+        <br>
+        <a href="read.html">Click To My Heart</a>
+
+    </div>
+    <div class="container">
+
+        <div class="heart">
+
+        </div>
+
+    </div>
+    <script src="anime.min.js"></script>
+    <script>
+        const container = document.querySelector('.container');
+        for (var i = 1; i <= 50; i++) {
+            const hearts = document.createElement('div');
+            hearts.classList.add('heart');
+            container.appendChild(hearts);
+        }
+
+        function animeHearts() {
+            anime({
+                targets: '.heart',
+                translateX: function() {
+                    return anime.random(-700, 700)
+                },
+
+                translateY: function() {
+                    return anime.random(-500, 500)
+                },
+                rotate: 45,
+                scale: function() {
+                    return anime.random(1, 5)
+                },
+                easing: 'easeInOutBack',
+                duration: 3000,
+                delay: anime.stagger(10),
+                complete: animeHearts,
+            })
+        }
+        animeHearts()
+    </script>
+
+</body>
+
+</html>
