@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #add8e6;
+    background: pink;
     overflow: hidden;
 }
 
@@ -21,7 +21,7 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    background: #FFB6C1;
+    background: red;
     transform: rotate(45deg);
     box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
 }
